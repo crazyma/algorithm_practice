@@ -16,4 +16,21 @@ public class NumberUnit {
         return reverse == target;
     }
 
+    static public int[] zeroToTheEnd(int[] array){
+        int front = 0;
+        int back = array.length - 1;
+
+        int[] result = new int[array.length];
+
+        for (int i = 0;i<array.length;i++) {
+            if(array[i] == 0){
+                result[back--] = 0;
+            }else{
+                result[front++] = array[i];
+            }
+        }
+
+        return result;
+    }
+
 }
