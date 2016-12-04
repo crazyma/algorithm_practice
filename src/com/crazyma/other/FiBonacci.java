@@ -13,6 +13,8 @@ public class FiBonacci {
             System.out.print(" " + i);
         }
         System.out.println();
+
+        System.out.println("the 8th fabo number is " + fibo(8));
     }
 
     private static void fibo(int[] array, int index){
@@ -24,6 +26,13 @@ public class FiBonacci {
             array[index] = array[index-1] + array[index-2];
 
         fibo(array,index+1);
+    }
+
+    private static int fibo(int index){
+        if(index == 0 || index == 1)
+            return 1;
+        else
+            return fibo(index - 1) + fibo(index -2);
     }
 
 
