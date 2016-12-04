@@ -1,9 +1,6 @@
 package com.crazyma;
 
-import com.crazyma.other.FiBonacci;
-import com.crazyma.other.NumberUnit;
-import com.crazyma.other.StringUnit;
-import com.crazyma.other.CustomLinkedList;
+import com.crazyma.other.*;
 
 public class Main {
 
@@ -45,7 +42,18 @@ public class Main {
         for (int i : sortedArray) {
             System.out.print(" " + i);
         }
-        System.out.println();
+
+        System.out.println("\n--------------------------");
+
+        SortUnit sortUnit = new SortUnit();
+        sortUnit.quickSort();
+
+        System.out.println("\n--------------------------");
+
+        SearchUnit searchUnit = new SearchUnit();
+        int index = searchUnit.binarySearch(32);
+        System.out.println("index = " + index);
+
         System.out.println("--------------------------");
 
     }
