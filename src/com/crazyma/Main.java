@@ -56,5 +56,11 @@ public class Main {
 
         System.out.println("--------------------------");
 
+
+        CollectionUnit collectionUnit = new CollectionUnit();
+        collectionUnit.testHashMap();
+        System.out.println("--------------------------");
+        collectionUnit.testHashSet();
+
     }
 }
