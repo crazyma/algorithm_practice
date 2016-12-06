@@ -45,6 +45,8 @@ public class Main {
 
         System.out.println("\n--------------------------");
 
+        System.out.println("prime number : " + NumberUnit.isPower(3559));
+
         SortUnit sortUnit = new SortUnit();
         sortUnit.quickSort();
 
