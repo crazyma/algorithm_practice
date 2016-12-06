@@ -15,7 +15,7 @@ public class SearchUnit {
         while(left <= right) {
             mid = (left + right)/2;
             if (sampleArray[mid] == target)
-                break;
+                return mid;
             else if(sampleArray[mid] < target){ // search right part
                 left = mid +1;
             }else{  //  search left part
@@ -23,7 +23,23 @@ public class SearchUnit {
             }
         }
 
-        return mid;
+        return -1;
+    }
+
+    public int binarySearchRecursively(int[] array, int left, int right,int target){
+
+        if(left > right)
+            return -1;
+
+        int mid  = (left + right)/2;
+
+        if(array[mid] < target){
+            return binarySearchRecursively(array,mid+1,right,target);
+        }else if(array[mid] > target){
+            return binarySearchRecursively(array,left,mid-1,target);
+        }else{
+            return mid;
+        }
     }
 
 }

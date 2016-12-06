@@ -51,8 +51,14 @@ public class Main {
         System.out.println("\n--------------------------");
 
         SearchUnit searchUnit = new SearchUnit();
-        int index = searchUnit.binarySearch(32);
+        int index = searchUnit.binarySearch(2);
         System.out.println("index = " + index);
+
+        int[] searchArray = {15,24,37,42,53,68,72,85,97};
+        System.out.println(
+                "index = " + searchUnit.binarySearchRecursively(searchArray,0,searchArray.length-1,94)
+        );
+
 
         System.out.println("--------------------------");
 
@@ -61,6 +67,16 @@ public class Main {
         collectionUnit.testHashMap();
         System.out.println("--------------------------");
         collectionUnit.testHashSet();
+        System.out.println("--------------------------");
+
+        int a = 1;
+        int b = 4;
+        int c = 2;
+        int d = 3;
+        System.out.println(a < c || a == c && b < d);
+        System.out.println((a < c || a == c) && b < d);
+        System.out.println(a < c || (a == c && b < d));
+
 
     }
 }
