@@ -106,7 +106,7 @@ public class SortUnit {
         print(array);
     }
 
-
+    //  let the array[left] be the pivot
     private void quickOperation(int[] array,int left,int right){
         if(left < right) {
             int i = left;
