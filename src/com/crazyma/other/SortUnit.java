@@ -120,7 +120,7 @@ public class SortUnit {
                 swap(array,i,j);
             }
 
-            swap(array,left,j);
+            swap(array,left,j); //  ATTENTION, 這裡的交換對象是 Left(Pivot) & j(從右邊往左移動的那位)
             quickOperation(array,left,j-1);
             quickOperation(array,j+1,right);
         }
