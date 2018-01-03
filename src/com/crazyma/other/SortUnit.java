@@ -138,7 +138,7 @@ public class SortUnit {
             int middle = array.length / 2;
 
             int[] leftArray = new int[middle];  //  0 ~ middle - 1
-            int[] rightArray = new int [array.length - middle]; //  middle ~ end
+            int[] rightArray = new int[array.length - middle]; //  middle ~ end
 
             for (int i = 0; i < leftArray.length; i++) {
                 leftArray[i] = array[i];
@@ -165,11 +165,11 @@ public class SortUnit {
         int[] resultArray = new int[leftArray.length + rightArray.length];
 
         while (i < leftArray.length || j < rightArray.length) {
-            if(i == leftArray.length){
+            if (i == leftArray.length) {
                 resultArray[index++] = rightArray[j++];
-            } else if(j == rightArray.length){
+            } else if (j == rightArray.length) {
                 resultArray[index++] = leftArray[i++];
-            } else if(leftArray[i] < rightArray[j]){
+            } else if (leftArray[i] < rightArray[j]) {
                 resultArray[index++] = leftArray[i++];
             } else {
                 resultArray[index++] = rightArray[j++];
@@ -177,6 +177,44 @@ public class SortUnit {
         }
 
         return resultArray;
+    }
+
+    public void heapSort() {
+        int[] array = cloneSampleArray();
+        heapOperation(array);
+        print(array);
+    }
+
+    public void heapOperation(int[] array) {
+        for (int i = (int)Math.floor(array.length / 2) - 1; i >= 0 ; i--) {
+            heapify(array, i, array.length);
+        }
+
+
+        for (int i = array.length - 1; i > 0; i--) {
+            swap(array, 0, i);
+            heapify(array, 0, i);
+        }
+
+    }
+
+    public void heapify(int[] array, int root, int length) {
+
+        int leftChild = root * 2 + 1;
+        int rightChild = leftChild  + 1;
+        int max = root;
+
+        if (leftChild < length && array[max] < array[leftChild])
+            max = leftChild;
+
+        if (rightChild < length && array[max] < array[rightChild])
+            max = rightChild;
+
+        if (root != max) {
+            swap(array, root, max);
+            heapify(array, max, length);
+        }
+
     }
 
 }

@@ -50,7 +50,7 @@ public class Main {
         System.out.println("\n--------------------------");
         System.out.println("*** Soring  ***");
         SortUnit sortUnit = new SortUnit();
-        sortUnit.mergeSort();
+        sortUnit.heapSort();
 
         System.out.println("\n--------------------------");
 
