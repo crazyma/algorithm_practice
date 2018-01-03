@@ -47,8 +47,10 @@ public class Main {
 
         System.out.println("prime number : " + NumberUnit.isPower(3559));
 
+        System.out.println("\n--------------------------");
+        System.out.println("*** Soring  ***");
         SortUnit sortUnit = new SortUnit();
-        sortUnit.quickSort();
+        sortUnit.mergeSort();
 
         System.out.println("\n--------------------------");
 
