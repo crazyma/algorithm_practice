@@ -1,11 +1,22 @@
 package com.crazyma;
 
+import com.crazyma.interviewbit.SpiralOrder;
 import com.crazyma.other.*;
 
 public class Main {
 
     public static void main(String[] args) {
 
+        int[][] A = {{11,12,13,14},{21,22,23,24},{31,32,33,34},{41,42,43,44}};
+
+        int[] R = new SpiralOrder().officialMethod(A);
+
+        for (int i : R) {
+            System.out.print(i + " ");
+        }
+
+
+        System.out.println("\n--------------------------");
         FiBonacci.runFabo();
 
         String string = "David and Cathy";
