@@ -1,5 +1,6 @@
 package com.crazyma;
 
+import com.crazyma.interviewbit.FindFactor;
 import com.crazyma.interviewbit.SpiralOrder;
 import com.crazyma.other.*;
 
@@ -9,7 +10,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-
+        findFactor(100);
 
 
         String stringX = "XD";
@@ -111,5 +112,15 @@ public class Main {
         System.out.println(a < c || (a == c && b < d));
 
 
+    }
+
+    private static void findFactor(int target){
+        System.out.println("\n-----   find factor   --------");
+        List<Integer> list = FindFactor.findAllFactor(target);
+        System.out.print("factor of " + target + ": ");
+        for (Integer integer : list) {
+            System.out.print(integer + " ");
+        }
+        System.out.println("\n--------------------------");
     }
 }
