@@ -1,6 +1,7 @@
 package com.crazyma;
 
 import com.crazyma.interviewbit.FindFactor;
+import com.crazyma.interviewbit.MathUtils;
 import com.crazyma.interviewbit.SpiralOrder;
 import com.crazyma.other.*;
 
@@ -11,16 +12,16 @@ public class Main {
     public static void main(String[] args) {
 
         findFactor(100);
-
+        findGCD(184, 72);
 
         String stringX = "XD";
         char[] chars = stringX.toCharArray();
         for (char aChar : chars) {
-            System.out.println((int)aChar);
+            System.out.println((int) aChar);
         }
 
 
-        int[][] A = {{11,12,13,14},{21,22,23,24},{31,32,33,34},{41,42,43,44}};
+        int[][] A = {{11, 12, 13, 14}, {21, 22, 23, 24}, {31, 32, 33, 34}, {41, 42, 43, 44}};
 
         int[] R = new SpiralOrder().officialMethod(A);
 
@@ -67,7 +68,7 @@ public class Main {
 
         System.out.println("--------------------------");
 
-        int[] intArray = {5,2,0,5,0,0,2,0,4};
+        int[] intArray = {5, 2, 0, 5, 0, 0, 2, 0, 4};
         int[] sortedArray = NumberUnit.zeroToTheEnd(intArray);
         for (int i : sortedArray) {
             System.out.print(" " + i);
@@ -88,9 +89,9 @@ public class Main {
         int index = searchUnit.binarySearch(2);
         System.out.println("index = " + index);
 
-        int[] searchArray = {15,24,37,42,53,68,72,85,97};
+        int[] searchArray = {15, 24, 37, 42, 53, 68, 72, 85, 97};
         System.out.println(
-                "index = " + searchUnit.binarySearchRecursively(searchArray,0,searchArray.length-1,94)
+                "index = " + searchUnit.binarySearchRecursively(searchArray, 0, searchArray.length - 1, 94)
         );
 
 
@@ -114,13 +115,21 @@ public class Main {
 
     }
 
-    private static void findFactor(int target){
+    private static void findFactor(int target) {
         System.out.println("\n-----   find factor   --------");
         List<Integer> list = FindFactor.findAllFactor(target);
         System.out.print("factor of " + target + ": ");
         for (Integer integer : list) {
             System.out.print(integer + " ");
         }
+        System.out.println("\n--------------------------");
+    }
+
+    private static void findGCD(int a, int b) {
+        System.out.println("\n-----   find GCD   --------");
+        MathUtils.GCDUnit gcdUnit = new MathUtils.GCDUnit();
+        int gcd = gcdUnit.get(a, b);
+        System.out.print("gcd of " + a + " and " + b + ": " + gcd);
         System.out.println("\n--------------------------");
     }
 }
