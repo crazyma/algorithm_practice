@@ -11,6 +11,9 @@ public class Main {
 
     public static void main(String[] args) {
 
+        MathUtils.reverseNumber reverseNumber = new MathUtils.reverseNumber();
+        boolean r = reverseNumber.shitPalindromeCheck(1311131);
+        System.out.println(r);
         findFactor(100);
         findGCD(184, 72);
 
