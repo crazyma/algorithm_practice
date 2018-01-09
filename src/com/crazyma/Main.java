@@ -3,9 +3,21 @@ package com.crazyma;
 import com.crazyma.interviewbit.SpiralOrder;
 import com.crazyma.other.*;
 
+import java.util.List;
+
 public class Main {
 
     public static void main(String[] args) {
+
+
+
+
+        String stringX = "XD";
+        char[] chars = stringX.toCharArray();
+        for (char aChar : chars) {
+            System.out.println((int)aChar);
+        }
+
 
         int[][] A = {{11,12,13,14},{21,22,23,24},{31,32,33,34},{41,42,43,44}};
 
@@ -18,6 +30,12 @@ public class Main {
 
         System.out.println("\n--------------------------");
         FiBonacci.runFabo();
+        System.out.println("\n--------------------------FFFFFFFFFFFF");
+        List<Integer> fiboSerial = FiBonacci.getFiboSerial(20);
+        for (Integer integer : fiboSerial) {
+            System.out.println(" " + integer + " ");
+        }
+        System.out.println("\n--------------------------");
 
         String string = "David and Cathy";
         StringUnit stringUnit = new StringUnit();
