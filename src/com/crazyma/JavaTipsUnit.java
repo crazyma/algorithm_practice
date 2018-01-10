@@ -5,11 +5,23 @@ import java.util.*;
 
 /**
  * Created by david on 2018/1/10.
+ *
+ * 需要追蹤一下 Node, Stack, Queue 的使用
  */
 public class JavaTipsUnit {
 
-    public void sortArray(int[] array) {
-        Arrays.sort(array);
+    public void sortArray(String[] array) {
+        Arrays.sort(array, new Comparator<String>() {
+            @Override
+            public int compare(String o1, String o2) {
+                return 0;
+            }
+
+            @Override
+            public boolean equals(Object obj) {
+                return false;
+            }
+        });
     }
 
     public void searchArray(int[] array, int key) {
@@ -18,7 +30,7 @@ public class JavaTipsUnit {
 
     public void sortList(ArrayList<Integer> list) {
         Collections.sort(list);
-        /** 自定義 Comparator  */
+        /** 自定義 Comparator , 回傳為正, 表示 o1 > o2; 回傳為負 表示 o1 < o2; 回傳為0 表示 o1 == o2*/
         /*
         Collections.sort(list, new Comparator<Integer>() {
             @Override
