@@ -1,10 +1,7 @@
 package com.crazyma;
 
 import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Comparator;
+import java.util.*;
 
 /**
  * Created by david on 2018/1/10.
@@ -30,6 +27,14 @@ public class JavaTipsUnit {
             }
         });
          */
+    }
+
+    public void getAllKeyofMap(Map<Integer, Object> map) {
+        Iterator<Integer> iterator = map.keySet().iterator();
+        while (iterator.hasNext()) {
+            Integer key = iterator.next();
+            System.out.println("key: " + key + ", value: " + map.get(key));
+        }
     }
 
 }
