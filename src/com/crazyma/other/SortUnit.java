@@ -108,13 +108,14 @@ public class SortUnit {
 
     //  let the array[left] be the pivot
     private void quickOperation(int[] array, int left, int right) {
-        if (left < right) {
+        if (left < right) { //  起始確認
             int i = left;
             int j = right + 1;
             while (true) {
+                //  記得要先有 shift 確認
                 while (i + 1 < array.length && array[++i] < array[left]) ;
                 while (j - 1 > -1 && array[--j] > array[left]) ;
-                if (j <= i)
+                if (j <= i) //  相遇的時候就要停止，否則會出錯
                     break;
 
                 swap(array, i, j);
