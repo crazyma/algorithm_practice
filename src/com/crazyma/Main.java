@@ -2,6 +2,7 @@ package com.crazyma;
 
 import com.crazyma.interviewbit.FindFactor;
 import com.crazyma.interviewbit.MathUtils;
+import com.crazyma.interviewbit.MergeIntervals;
 import com.crazyma.interviewbit.SpiralOrder;
 import com.crazyma.other.*;
 
@@ -11,11 +12,12 @@ public class Main {
 
     public static void main(String[] args) {
 
-        MathUtils.reverseNumber reverseNumber = new MathUtils.reverseNumber();
-        boolean r = reverseNumber.shitPalindromeCheck(1311131);
-        System.out.println(r);
+
+        reverseNumberCheck();
+        mergeIntervals();
         findFactor(100);
         findGCD(184, 72);
+
 
         String stringX = "XD";
         char[] chars = stringX.toCharArray();
@@ -133,6 +135,21 @@ public class Main {
         MathUtils.GCDUnit gcdUnit = new MathUtils.GCDUnit();
         int gcd = gcdUnit.get(a, b);
         System.out.print("gcd of " + a + " and " + b + ": " + gcd);
+        System.out.println("\n--------------------------");
+    }
+
+    private static void reverseNumberCheck(){
+        System.out.println("\n-----  reverse number check  --------");
+        MathUtils.reverseNumber reverseNumber = new MathUtils.reverseNumber();
+        boolean r = reverseNumber.shitPalindromeCheck(1311131);
+        System.out.println(r);
+        System.out.println("\n--------------------------");
+    }
+
+    private static void mergeIntervals(){
+        System.out.println("\n-----   merge interval   --------");
+        MergeIntervals mergeIntervals = new MergeIntervals();
+        mergeIntervals.run();
         System.out.println("\n--------------------------");
     }
 }
