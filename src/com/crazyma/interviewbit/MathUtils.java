@@ -115,4 +115,8 @@ public class MathUtils {
         }
     }
 
+    public static List<List<Integer>> getPowerset(List<Integer> list){
+        return null;
+    }
+
 }
