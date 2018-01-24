@@ -7,6 +7,8 @@ import java.util.Map;
 
 /**
  * Created by david on 2016/12/6.
+ *
+ * Useful function in Collections class: addAll(), binarySearch(), copy(), fill(), list(), reverse(), shuffle(), sort()
  */
 public class CollectionUnit {
 

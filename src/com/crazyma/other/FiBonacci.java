@@ -1,6 +1,7 @@
 package com.crazyma.other;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -51,6 +52,23 @@ public class FiBonacci {
         }
 
         return list;
+    }
+
+    public static HashMap<Integer, Integer> hashMap = new HashMap<>();
+
+    //  另一種使用 Map 實作的做法
+    public static int fibo2(int x){
+        if(x == 0 || x == 1) {
+            return 1;
+        }
+
+        Integer r = hashMap.get(x);
+        if(r == null){
+            return fibo2( x - 1 ) + fibo2( x - 2);
+        }else{
+            return  r;
+        }
+
     }
 
 

@@ -76,6 +76,13 @@ public class MathUtils {
      * 1234 -> 4321
      */
     public static class reverseNumber {
+
+        public boolean isPalindrome(int number){
+            if(number == reverse(number))
+                return true;
+            return false;
+        }
+
         public int reverse(int number) {
             int r = 0;
             while(number > 0){
@@ -106,12 +113,6 @@ public class MathUtils {
             }
 
             return true;
-        }
-
-        public boolean isPalindrome(int number){
-            if(number == reverse(number))
-                return true;
-            return false;
         }
     }
 
