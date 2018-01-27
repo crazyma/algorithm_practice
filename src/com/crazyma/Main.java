@@ -11,37 +11,66 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
+        TreeUnit.Node root = null;
 
-        new MergeIntervals().run();
+        TreeUnit.RecursiveBinarySearchTree rbSearchTree = new TreeUnit.RecursiveBinarySearchTree();
+
+        root = rbSearchTree.insert(root, 4);
+        root = rbSearchTree.insert(root, 1);
+        root = rbSearchTree.insert(root, 7);
+        root = rbSearchTree.insert(root, 2);
+        root = rbSearchTree.insert(root, 0);
+        root = rbSearchTree.insert(root, 8);
+
+        System.out.println("exist : " +  rbSearchTree.isExist(root, 5));
+
+        rbSearchTree.postOrderPrint(root);
+        System.out.println("\n");
+
+        TreeUnit.BinarySearchTree bSearchTree = new TreeUnit.BinarySearchTree();
+        bSearchTree.insert(4);
+        bSearchTree.insert(1);
+        bSearchTree.insert(7);
+        bSearchTree.insert(2);
+        bSearchTree.insert(0);
+        bSearchTree.insert(8);
+        System.out.println("exist : " +  bSearchTree.isExist(3));
+        System.out.print("tree : " + bSearchTree.getRoot().value);
 
 
     }
 
-    public static int search(int[] array, int target, int front, int end){
-        if(front > end)
+    public static void aaa(TreeUnit.Node node) {
+        System.out.println("2. " + node.value);
+        node.value = 999;
+        System.out.println("3. " + node.value);
+    }
+
+    public static int search(int[] array, int target, int front, int end) {
+        if (front > end)
             return -1;
 
         int mid = (front + end) / 2;
-        if(array[mid] == target)
+        if (array[mid] == target)
             return mid;
-        else if(array[mid] < target){
-            return search(array,target,mid + 1, end);
-        }else{
-            return search(array,target,front, mid - 1);
+        else if (array[mid] < target) {
+            return search(array, target, mid + 1, end);
+        } else {
+            return search(array, target, front, mid - 1);
         }
     }
 
-    public static int search(int[] array, int target){
+    public static int search(int[] array, int target) {
         int front = 0;
         int end = array.length;
 
-        while(front >= 0 && end < array.length && front <= end){
+        while (front >= 0 && end < array.length && front <= end) {
             int mid = (front + end) / 2;
-            if(array[mid] == target)
+            if (array[mid] == target)
                 return mid;
-            else if(array[mid] < target){
+            else if (array[mid] < target) {
                 front = mid + 1;
-            }else {
+            } else {
                 end = mid - 1;
             }
         }
@@ -50,8 +79,7 @@ public class Main {
     }
 
 
-
-   //////////////////////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////////////////
 
     private static void findFactor(int target) {
         System.out.println("\n-----   find factor   --------");
