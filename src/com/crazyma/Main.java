@@ -6,21 +6,15 @@ import com.crazyma.interviewbit.MergeIntervals;
 import com.crazyma.interviewbit.SpiralOrder;
 import com.crazyma.other.*;
 
+import java.util.Arrays;
 import java.util.List;
 
 public class Main {
 
     public static void main(String[] args) {
 
-
-
     }
 
-    public static void aaa(TreeUnit.Node node) {
-        System.out.println("2. " + node.value);
-        node.value = 999;
-        System.out.println("3. " + node.value);
-    }
 
 
     //////////////////////////////////////////////////////////////////////////////////////////
