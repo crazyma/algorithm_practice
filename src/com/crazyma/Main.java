@@ -11,6 +11,22 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
+
+
+
+    }
+
+    public static void aaa(TreeUnit.Node node) {
+        System.out.println("2. " + node.value);
+        node.value = 999;
+        System.out.println("3. " + node.value);
+    }
+
+
+    //////////////////////////////////////////////////////////////////////////////////////////
+
+    private static void runTree(){
+        System.out.println("\n-----   Tree   --------");
         TreeUnit.Node root = null;
 
         TreeUnit.RecursiveBinarySearchTree rbSearchTree = new TreeUnit.RecursiveBinarySearchTree();
@@ -37,49 +53,8 @@ public class Main {
         System.out.println("exist : " +  bSearchTree.isExist(3));
         System.out.print("tree : " + bSearchTree.getRoot().value);
 
-
+        System.out.println("\n--------------------------");
     }
-
-    public static void aaa(TreeUnit.Node node) {
-        System.out.println("2. " + node.value);
-        node.value = 999;
-        System.out.println("3. " + node.value);
-    }
-
-    public static int search(int[] array, int target, int front, int end) {
-        if (front > end)
-            return -1;
-
-        int mid = (front + end) / 2;
-        if (array[mid] == target)
-            return mid;
-        else if (array[mid] < target) {
-            return search(array, target, mid + 1, end);
-        } else {
-            return search(array, target, front, mid - 1);
-        }
-    }
-
-    public static int search(int[] array, int target) {
-        int front = 0;
-        int end = array.length;
-
-        while (front >= 0 && end < array.length && front <= end) {
-            int mid = (front + end) / 2;
-            if (array[mid] == target)
-                return mid;
-            else if (array[mid] < target) {
-                front = mid + 1;
-            } else {
-                end = mid - 1;
-            }
-        }
-        return -1;
-
-    }
-
-
-    //////////////////////////////////////////////////////////////////////////////////////////
 
     private static void findFactor(int target) {
         System.out.println("\n-----   find factor   --------");
