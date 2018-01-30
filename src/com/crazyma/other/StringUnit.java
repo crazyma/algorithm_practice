@@ -15,6 +15,11 @@ public class StringUnit {
         return builder.toString();
     }
 
+    public String reverse2(String string){
+        StringBuilder builder = new StringBuilder(string);
+        return builder.reverse().toString();
+    }
+
     public String reverseRecursively(String string){
         if(string.length() <= 1)
             return string;
