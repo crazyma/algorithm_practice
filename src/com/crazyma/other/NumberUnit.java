@@ -45,4 +45,22 @@ public class NumberUnit {
         return false;
     }
 
+    public static String intToBinaryString(int x){
+        StringBuilder builder = new StringBuilder();
+        do{
+            builder.insert(0, x%2);
+            x = x >> 1;
+        }while(x != 0);
+        return builder.toString();
+    }
+
+    public static int binaryStringToInt(String str){
+        char[] charArray = str.toCharArray();
+        int count = 0;
+        for(int i=0;i<charArray.length;i++){
+            count *= 2;
+            count += charArray[i] == '1' ? 1 : 0;
+        }
+        return count;
+    }
 }
